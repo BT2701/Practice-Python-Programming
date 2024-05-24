@@ -1,15 +1,10 @@
 class HinhChuNhat:
 
-    # constructor co tham so
-    def __init__(self, chieuDai, chieuRong):
+    # constructor co tham so khuyen khich nen tao gia tri mac dinh
+    def __init__(self, chieuDai=1, chieuRong=1):
         self.chieuDai= chieuDai
         self.chieuRong= chieuRong
 
-
-    # constructor khong tham so
-    def __init__(self)-> None:
-        pass
-    
     # dien tich
     def dienTich(self):
         return self.chieuDai * self.chieuRong
@@ -38,12 +33,12 @@ class HinhChuNhat:
 
 def main():
     # khoi tao constructor co tham so
-    # hcn= HinhChuNhat(4,5)
+    hcn= HinhChuNhat(4,5)
 
     # khoi tao constructor khong tham so
-    hcn= HinhChuNhat()
-    hcn.setChieuDai(10)
-    hcn.setChieuRong(5)
+    # hcn= HinhChuNhat()
+    # hcn.setChieuDai(10)
+    # hcn.setChieuRong(5)
     hcn.printInfor()
     
 if __name__=='__main__':
