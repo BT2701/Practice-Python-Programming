@@ -9,6 +9,15 @@ def chuVi(width, weight):
 def theTich(width, height, weight):
     return width*height*weight
 
+def checkSNT(x):
+    if x< 2: 
+        return False
+    else:
+        for i in range (2,x): 
+            if x%i==0:
+                return False
+    return True
+
 print('Chiều dài: ', [width for width in widths])
 print('Chiều cao: ', [height for height in heights])
 print ('Chiều rộng: ', [weight for weight in weights])
@@ -17,3 +26,4 @@ print('=======================')
 print('Diện tích: ',[dienTich(width, weight) for width, weight in zip(widths, weights)])
 print( 'Chu vi: ',[chuVi(width, weight) for width, weight in zip (widths, weights)])
 print('Thể tích: ',[theTich(width, height, weight) for width, height, weight in zip(widths, heights, weights)]) 
+print('danh sach so nguyen to: ', [x for x in widths if checkSNT(x)])

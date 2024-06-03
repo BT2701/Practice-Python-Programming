@@ -40,3 +40,21 @@ colors=['red', 'blue', 'green', 'white', 'black']   #ROOT
 ##colors.sort()         #sort list ascending
 ##colors.sort(reverse=True)   #decrease
 
+# for i in range(0,len(colors)):
+#     print(colors[i])
+
+
+maMonHoc={"lập trình python":1, "java": 2, "mã nguồn mở": 3}
+maNganh={1: 'cntt', 2:'ktpm', 3:'httt'}
+
+valueMonHoc= list(maMonHoc.values())
+keyNganh=list(maNganh.keys())
+
+newDict={}
+for i in range(len(valueMonHoc)):
+    if valueMonHoc[i]==keyNganh[i]:
+        monHoc= [key for key, val in maMonHoc.items() if val==valueMonHoc[i] ] [0]
+        nganh=[val for key, val in maNganh.items() if key==keyNganh[i] ] [0]
+        newDict[monHoc]=nganh
+
+print(newDict)
